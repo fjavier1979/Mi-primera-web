@@ -1,0 +1,610 @@
+
+/* =========================
+   1. CONFIGURACIÓN GENERAL
+========================= */
+
+:root {
+    --fondo: #f8f6f1;
+    --blanco: #ffffff;
+    --oscuro: #242720;
+    --verde: #354638;
+    --dorado: #b99b62;
+    --texto: #6f716a;
+    --borde: #e8e4db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fondo);
+    color: var(--oscuro);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+
+/* =========================
+   2. CABECERA Y NAVEGACIÓN
+========================= */
+
+.cabecera {
+    width: 100%;
+    min-height: 84px;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: var(--fondo);
+    border-bottom: 1px solid var(--borde);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    color: var(--dorado);
+}
+
+.navegacion {
+    display: flex;
+    gap: 30px;
+}
+
+.navegacion a {
+    font-size: 13px;
+    color: var(--texto);
+    transition: color 0.3s ease;
+}
+
+.navegacion a:hover {
+    color: var(--dorado);
+}
+
+.boton-cabecera {
+    padding: 12px 20px;
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-cabecera:hover {
+    background-color: var(--verde);
+}
+
+
+/* =========================
+   3. PORTADA PRINCIPAL
+========================= */
+
+.hero {
+    min-height: 610px;
+    padding: 75px 10%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
+    overflow: hidden;
+}
+
+.etiqueta {
+    color: var(--dorado);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 4.2vw, 62px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    color: var(--verde);
+    font-style: italic;
+}
+
+.hero-descripcion {
+    max-width: 430px;
+    margin: 25px 0 30px;
+    color: var(--texto);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.boton-principal {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: var(--verde);
+    color: var(--blanco);
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-principal:hover {
+    background-color: var(--oscuro);
+}
+
+.texto-inferior {
+    margin-top: 35px;
+    color: #99998f;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================
+   4. ILUSTRACIÓN DE PORTADA
+========================= */
+
+.hero-visual {
+    min-height: 420px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tarjeta-libro {
+    width: 230px;
+    height: 320px;
+    position: absolute;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta-trasera {
+    background-color: #d9d0bc;
+    color: #354638;
+    transform: translate(-45px, -20px) rotate(-10deg);
+}
+
+.tarjeta-delantera {
+    background-color: var(--verde);
+    color: var(--blanco);
+    transform: translate(35px, 15px) rotate(5deg);
+}
+
+.libro-etiqueta,
+.libro-numero {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.tarjeta-libro h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.tarjeta-libro p {
+    font-size: 10px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
+.libro-simbolo {
+    color: var(--dorado);
+    font-size: 55px;
+    text-align: center;
+}
+
+.sello {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    z-index: 2;
+    border: 1px solid var(--dorado);
+    border-radius: 50%;
+    background-color: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--verde);
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.sello strong {
+    color: var(--dorado);
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+
+/* =========================
+   5. SECCIONES GENERALES
+========================= */
+
+.seccion {
+    padding: 90px 10%;
+}
+
+.categorias {
+    background-color: var(--blanco);
+}
+
+.encabezado-seccion {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.encabezado-seccion .etiqueta {
+    margin-bottom: 12px;
+}
+
+.encabezado-seccion h2,
+.nosotros h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 3.5vw, 43px);
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.texto-seccion {
+    max-width: 300px;
+    color: var(--texto);
+    font-size: 13px;
+}
+
+
+/* =========================
+   6. TARJETAS DE CATEGORÍAS
+========================= */
+
+.rejilla-categorias {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.categoria {
+    padding: 28px 22px;
+    border: 1px solid var(--borde);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.categoria:hover {
+    transform: translateY(-5px);
+    border-color: var(--dorado);
+}
+
+.icono-categoria {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: var(--dorado);
+    font-size: 30px;
+}
+
+.categoria h3 {
+    margin-bottom: 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.categoria p {
+    min-height: 65px;
+    margin-bottom: 20px;
+    color: var(--texto);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.categoria a {
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   7. PRODUCTOS
+========================= */
+
+.productos {
+    background-color: var(--fondo);
+}
+
+.rejilla-productos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.producto {
+    min-width: 0;
+}
+
+.producto-portada {
+    min-height: 330px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover .producto-portada {
+    transform: translateY(-5px);
+}
+
+.producto-portada > span {
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.producto-portada h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(27px, 3vw, 36px);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.producto-portada > p {
+    font-size: 8px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+.portada-uno {
+    background-color: #d9d0bc;
+    color: #354638;
+}
+
+.portada-dos {
+    background-color: #354638;
+    color: #f8f6f1;
+}
+
+.portada-tres {
+    background-color: #e9dfd1;
+    color: #6a4e3c;
+}
+
+.producto-info {
+    padding: 18px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+}
+
+.producto-info h3 {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.producto-info p {
+    margin-top: 5px;
+    color: var(--texto);
+    font-size: 11px;
+}
+
+.precio {
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.aviso-productos {
+    margin-top: 25px;
+    color: var(--texto);
+    font-size: 11px;
+}
+
+
+/* =========================
+   8. PRESENTACIÓN
+========================= */
+
+.nosotros {
+    background-color: #eae6dc;
+    text-align: center;
+}
+
+.nosotros h2 {
+    margin: 0 auto 25px;
+}
+
+.nosotros h2 span {
+    color: var(--verde);
+    font-style: italic;
+}
+
+.nosotros > p:last-child {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--texto);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   9. PIE DE PÁGINA
+========================= */
+
+.pie-pagina {
+    padding: 45px 7%;
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pie-pagina > p {
+    color: #c3c3b9;
+    font-size: 11px;
+}
+
+.copyright {
+    font-size: 10px !important;
+}
+
+
+/* =========================
+   10. ADAPTACIÓN A TABLETS
+========================= */
+
+@media (max-width: 1000px) {
+
+    .cabecera {
+        padding: 20px 5%;
+    }
+
+    .navegacion {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 6%;
+        gap: 20px;
+    }
+
+    .seccion {
+        padding: 70px 6%;
+    }
+
+    .rejilla-categorias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .producto-portada {
+        min-height: 280px;
+        padding: 22px;
+    }
+
+}
+
+
+/* =========================
+   11. ADAPTACIÓN A MÓVILES
+========================= */
+
+@media (max-width: 650px) {
+
+    .cabecera {
+        padding: 20px 6%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .navegacion {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .navegacion a {
+        font-size: 11px;
+    }
+
+    .boton-cabecera {
+        padding: 10px 12px;
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 60px 7% 45px;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-visual {
+        min-height: 390px;
+    }
+
+    .tarjeta-libro {
+        width: 205px;
+        height: 290px;
+    }
+
+    .sello {
+        right: 5px;
+        bottom: 10px;
+    }
+
+    .seccion {
+        padding: 65px 7%;
+    }
+
+    .encabezado-seccion {
+        align-items: start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .rejilla-categorias,
+    .rejilla-productos {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .categoria p {
+        min-height: auto;
+    }
+
+    .producto-portada {
+        min-height: 330px;
+    }
+
+    .pie-pagina {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
