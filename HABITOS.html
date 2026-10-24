@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre El poder de los hábitos, una guía digital para crear rutinas positivas y transformar tu día a día.">
+    <title>El poder de los hábitos | Lumen Digital</title>
+<link rel="stylesheet" href="CSS/STYLE.css">
+
+<style>
+    .producto-detalle {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 90px 30px 110px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+    }
+
+    .detalle-portada {
+        background: linear-gradient(145deg, #e9e2d3 0%, #d9d0bb 100%);
+        min-height: 500px;
+        padding: 48px 42px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #344638;
+        box-sizing: border-box;
+        border: 1px solid #d1c5ae;
+        box-shadow: 0 18px 45px rgba(32, 37, 31, 0.08);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .detalle-portada .etiqueta {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .detalle-portada h2 {
+        font-family: Georgia, serif;
+        font-size: clamp(38px, 5vw, 58px);
+        font-weight: normal;
+        line-height: 1.1;
+    }
+
+    .detalle-portada h2::after {
+        content: "";
+        display: block;
+        width: 64px;
+        height: 2px;
+        margin-top: 24px;
+        background-color: #b58b43;
+    }
+
+
+    .detalle-portada p {
+        font-size: 11px;
+        letter-spacing: 2.5px;
+        line-height: 1.8;
+        text-transform: uppercase;
+        opacity: 0.85;
+    }
+
+
+    .detalle-info .etiqueta {
+        color: #b58b43;
+        letter-spacing: 3px;
+        font-size: 12px;
+    }
+
+    .detalle-info h1 {
+        font-family: Georgia, serif;
+        font-size: clamp(36px, 4vw, 52px);
+        font-weight: normal;
+        line-height: 1.15;
+        color: #242820;
+    }
+
+    .detalle-descripcion {
+        color: #686860;
+        line-height: 1.9;
+    }
+
+    .detalle-precio {
+        display: block;
+        margin: 30px 0;
+        font-size: 27px;
+        font-weight: bold;
+    }
+
+    .detalle-aviso {
+        font-size: 13px;
+        color: #77776f;
+        margin-top: 20px;
+        line-height: 1.7;
+    }
+
+    .volver-inicio {
+        display: inline-block;
+        margin-top: 25px;
+        color: #344638;
+        text-decoration: none;
+    }
+
+    @media (max-width: 750px) {
+        .producto-detalle {
+            grid-template-columns: 1fr;
+            gap: 40px;
+            padding: 50px 22px 70px;
+        }
+
+        .detalle-portada {
+            min-height: 380px;
+        }
+    }
+
+    .detalle-formato {
+        margin: 10px 0 24px;
+        color: #66645e;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- CABECERA -->
+<header class="cabecera">
+    <a href="INDEX.html#inicio" class="logo">LUMEN<span>.</span></a>
+
+    <nav class="navegacion">
+        <a href="INDEX.html#inicio">Inicio</a>
+        <a href="INDEX.html#categorias">Categorías</a>
+        <a href="INDEX.html#productos">Productos</a>
+        <a href="INDEX.html#nosotros">Nosotros</a>
+    </nav>
+
+    <a href="INDEX.html#productos" class="boton-cabecera">Explorar biblioteca</a>
+</header>
+
+<main>
+    <section class="producto-detalle">
+
+        <div class="detalle-portada">
+            <span class="etiqueta">COLECCIÓN LUMEN · E-BOOK</span>
+
+            <h2>El poder<br>de los hábitos</h2>
+
+            <p>PEQUEÑOS CAMBIOS. GRANDES RESULTADOS.</p>
+        </div>
+
+        <div class="detalle-info">
+            <p class="etiqueta">GUÍA DIGITAL · PDF</p>
+
+            <h1>El poder de los hábitos</h1>
+
+            <p class="detalle-descripcion">
+                Transforma tu día a día a través de pequeños cambios que pueden marcar una gran diferencia.
+                Esta guía práctica te ayudará a comprender tus rutinas, identificar hábitos que quieres mejorar
+                y diseñar una estrategia realista para avanzar hacia tus objetivos. Aprende a organizar mejor
+                tu tiempo, mantener la constancia y construir una rutina que encaje con tu estilo de vida.
+            </p>
+            <div class="contenido-guia">
+                <h2>¿Qué encontrarás en esta guía?</h2>
+                <ul>
+                    <li>Cómo identificar los hábitos que quieres mejorar.</li>
+                    <li>Estrategias para crear rutinas realistas y sostenibles.</li>
+                    <li>Ideas prácticas para organizar mejor tu tiempo.</li>
+                    <li>Claves para mantener la constancia y avanzar hacia tus objetivos.</li>
+                </ul>
+            </div>
+
+            <span class="detalle-precio">7,99 €</span>
+
+            <p class="detalle-formato">
+                📘 E-book digital · Formato PDF · Descarga digital
+            </p>
+
+            <button class="boton-producto" type="button" disabled>
+                Próximamente disponible
+            </button>
+
+            <p class="detalle-aviso">
+                Producto en preparación. Próximamente podrás adquirir
+                esta guía digital y descargarla.
+            </p>
+
+            <a href="INDEX.html#productos" class="volver-inicio">
+                ← Volver a la biblioteca
+            </a>
+        </div>
+
+    </section>
+</main>
+
+<footer class="pie-pagina">
+    <a href="INDEX.html#inicio" class="logo">LUMEN<span>.</span></a>
+    <p>Ideas que inspiran. Recursos que transforman.</p>
+    <p>© 2026 Lumen Digital. Proyecto en desarrollo.</p>
+</footer>
+
+</body>
+</html>

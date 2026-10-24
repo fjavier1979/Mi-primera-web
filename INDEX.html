@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -140,26 +139,37 @@
                     <h2>Descubre nuestros favoritos.</h2>
                 </div>
             </div>
+            <div class="filtros-productos">
+                <button class="filtro-activo" data-filtro="todos">Todos</button>
+                <button data-filtro="ebooks">E-books</button>
+                <button data-filtro="plantillas">Plantillas</button>
+                <button data-filtro="tarjetas">Tarjetas digitales</button>
+                <button data-filtro="guias">Guías prácticas</button>
+            </div>
+
 
             <div class="rejilla-productos">
 
-                <article class="producto">
+                <article class="producto" data-categoria="ebooks">
                     <div class="producto-portada portada-uno">
                         <span>E-BOOK</span>
                         <h3>El poder<br>de los hábitos</h3>
                         <p>PEQUEÑOS CAMBIOS, GRANDES RESULTADOS</p>
                     </div>
-
+                       
                     <div class="producto-info">
                         <div>
                             <h3>El poder de los hábitos</h3>
                             <p>Guía digital · PDF</p>
                         </div>
-                        <span class="precio">7,99 €</span>
-                    </div>
+                             <span class="precio">7,99 €</span>
+                        </div>
+                    <button class="boton-producto" type="button" data-producto="habitos">
+                       Descubrir producto →
+                    </button>
                 </article>
 
-                <article class="producto">
+                <article class="producto" data-categoria="plantillas">
                     <div class="producto-portada portada-dos">
                         <span>PLANTILLA</span>
                         <h3>Tu semana,<br>en equilibrio.</h3>
@@ -173,9 +183,12 @@
                         </div>
                         <span class="precio">4,99 €</span>
                     </div>
+                        <a href="PLANIFICADOR.html" class="boton-producto">
+                         Descubrir producto →
+                        </a>
                 </article>
 
-                <article class="producto">
+                <article class="producto" data-categoria="ebooks">
                     <div class="producto-portada portada-tres">
                         <span>GUÍA PRÁCTICA</span>
                         <h3>Creatividad<br>sin límites.</h3>
@@ -189,6 +202,9 @@
                         </div>
                         <span class="precio">5,99 €</span>
                     </div>
+                        <a href="CREATIVIDAD.html" class="boton-producto">
+                        Descubrir producto →
+                        </a>
                 </article>
 
             </div>
@@ -209,11 +225,29 @@
                 <span>La inspiración te invita a cruzarlas.</span>
             </h2>
 
-            <p>
-                Creamos un espacio para descubrir recursos que
-                despiertan ideas, facilitan el aprendizaje y
-                acompañan tu crecimiento personal.
+            <p>En Lumen Digital creemos que una buena idea puede convertirse en un gran cambio.
+               Por eso, reunimos recursos digitales diseñados para inspirarte, ayudarte a aprender,
+               organizar tus proyectos y desarrollar tu creatividad. Queremos que encuentres
+               herramientas prácticas que te acompañen en tu crecimiento personal y profesional,
+               para que puedas transformar tus ideas en resultados.
             </p>
+            <div class="valores-lumen">
+
+                <article class="valor-lumen">
+                <h3>Recursos prácticos</h3>
+                <p>Herramientas digitales útiles para organizar tus tareas, impulsar tus proyectos y simplificar tu día a día.</p>
+                </article>
+
+                <article class="valor-lumen">
+                <h3>Aprendizaje continuo</h3>
+                <p>Materiales diseñados para descubrir nuevas ideas, desarrollar habilidades y seguir creciendo.</p>
+                </article>
+
+                <article class="valor-lumen">
+                <h3>Inspiración creativa</h3>
+                <p>Recursos para despertar tu creatividad, explorar posibilidades y convertir tus ideas en proyectos.</p>
+                </article>
+            </div>
         </section>
 
     </main>
@@ -234,4 +268,4 @@
 
 </body>
 </html>
-```
+

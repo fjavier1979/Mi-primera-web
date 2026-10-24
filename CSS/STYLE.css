@@ -608,3 +608,154 @@ section {
     }
 
 }
+
+/* Botones de las tarjetas de productos */
+.boton-producto {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 20px;
+    background-color: #344638;
+    color: #ffffff;
+    border: 1px solid #344638;
+    font-family: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-producto:hover {
+    background-color: #c5a15b;
+    border-color: #c5a15b;
+    color: #20251f;
+}
+
+.boton-producto:focus-visible {
+    outline: 2px solid #c5a15b;
+    outline-offset: 3px;
+}
+
+/* BLOQUES DE VALOR - LUMEN DIGITAL */
+
+.valores-lumen {
+display: grid;
+grid-template-columns: repeat(3, minmax(0, 1fr));
+gap: 28px;
+max-width: 1100px;
+margin: 55px auto 0;
+padding: 0 20px;
+}
+
+.valor-lumen {
+padding: 32px 24px;
+background-color: #f8f6f0;
+border: 1px solid #e3dccd;
+border-radius: 8px;
+text-align: center;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valor-lumen:hover {
+transform: translateY(-5px);
+box-shadow: 0 12px 28px rgba(32, 37, 31, 0.08);
+}
+
+.valor-lumen h3 {
+margin: 0 0 14px;
+color: #344638;
+font-size: 20px;
+}
+
+.valor-lumen p {
+margin: 0;
+color: #66645e;
+font-size: 15px;
+line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+.valores-lumen {
+grid-template-columns: 1fr;
+gap: 18px;
+margin-top: 35px;
+}
+}
+
+/* FILTROS DEL CATÁLOGO */
+
+.filtros-productos {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 12px;
+margin: 35px auto;
+padding: 0 20px;
+}
+
+.filtros-productos button {
+padding: 11px 20px;
+border: 1px solid #d8cfbd;
+border-radius: 30px;
+background-color: #f8f6f0;
+color: #344638;
+font-family: inherit;
+font-size: 14px;
+cursor: pointer;
+transition: background-color 0.3s ease, color 0.3s ease,
+border-color 0.3s ease;
+}
+
+.filtros-productos button:hover,
+.filtros-productos button.filtro-activo {
+background-color: #344638;
+border-color: #344638;
+color: #ffffff;
+}
+
+.filtros-productos button:focus-visible {
+outline: 2px solid #c5a15b;
+outline-offset: 3px;
+}
+
+/* Ocultar productos que no coincidan con el filtro */
+.producto[hidden] {
+display: none !important;
+}
+
+/* CONTENIDO DE LA GUÍA */
+
+.contenido-guia {
+margin: 30px 0;
+padding: 26px 28px;
+background-color: #f8f6f0;
+border: 1px solid #e3dccd;
+border-radius: 8px;
+}
+
+.contenido-guia h2 {
+margin: 0 0 20px;
+color: #344638;
+font-size: 21px;
+}
+
+.contenido-guia ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+.contenido-guia li {
+position: relative;
+margin: 13px 0;
+padding-left: 28px;
+color: #55564f;
+font-size: 15px;
+line-height: 1.7;
+}
+
+.contenido-guia li::before {
+content: "✓";
+position: absolute;
+left: 0;
+color: #c5a15b;
+font-weight: bold;
+}

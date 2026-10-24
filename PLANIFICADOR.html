@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Planificador semanal digital de Lumen Digital. Organiza tus tareas, prioridades y objetivos.">
+    <title>Planificador semanal | Lumen Digital</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8f6f0;
+            color: #252820;
+        }
+
+        .cabecera {
+            min-height: 90px;
+            padding: 20px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            border-bottom: 1px solid #e9e4da;
+        }
+
+        .logo {
+            color: #20231e;
+            text-decoration: none;
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .logo span {
+            color: #bd9855;
+        }
+
+        .navegacion {
+            display: flex;
+            gap: 32px;
+        }
+
+        .navegacion a {
+            color: #55564f;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .boton-cabecera,
+        .boton-producto {
+            display: inline-block;
+            background: #263027;
+            color: white;
+            padding: 16px 23px;
+            text-decoration: none;
+            border: none;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .producto-detalle {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 100px 7%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 7%;
+        }
+
+        .detalle-portada {
+            aspect-ratio: 3 / 3.2;
+            padding: 45px;
+            background: #344638;
+            color: #fffdf7;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .etiqueta {
+            color: #c5a363;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            line-height: 1.8;
+        }
+
+        .detalle-portada h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(36px, 4vw, 56px);
+            line-height: 1.1;
+            font-weight: normal;
+        }
+
+        .portada-lema {
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            line-height: 1.8;
+        }
+
+        .detalle-info>.etiqueta {
+            display: block;
+            margin-bottom: 24px;
+        }
+
+        .detalle-info h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(42px, 5vw, 60px);
+            line-height: 1.08;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .descripcion {
+            color: #68675f;
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+        }
+
+        .detalle-precio {
+            display: block;
+            font-size: 29px;
+            margin: 35px 0;
+        }
+
+        .aviso {
+            margin-top: 25px;
+            color: #77766e;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .volver {
+            display: inline-block;
+            margin-top: 35px;
+            color: #263027;
+            text-decoration: none;
+        }
+
+        .pie-pagina {
+            background: #20231e;
+            color: #f8f6f0;
+            padding: 35px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .pie-pagina p {
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 750px) {
+            .cabecera {
+                padding: 20px 5%;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .navegacion {
+                order: 3;
+                width: 100%;
+                justify-content: space-between;
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+
+            .boton-cabecera {
+                padding: 12px;
+            }
+
+            .producto-detalle {
+                grid-template-columns: 1fr;
+                padding: 50px 7%;
+                gap: 45px;
+            }
+
+            .detalle-portada {
+                min-height: 400px;
+                aspect-ratio: auto;
+                padding: 35px;
+            }
+
+            .pie-pagina {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* CARACTERÍSTICAS DEL PLANIFICADOR */
+
+        .caracteristicas-planificador {
+            margin: 30px 0;
+            padding: 26px 28px;
+            background-color: #f8f6f0;
+            border: 1px solid #e3dccd;
+            border-radius: 8px;
+        }
+
+        .caracteristicas-planificador h2 {
+            margin: 0 0 20px;
+            color: #344638;
+            font-size: 21px;
+        }
+
+        .caracteristicas-planificador ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .caracteristicas-planificador li {
+            position: relative;
+            margin: 13px 0;
+            padding-left: 28px;
+            color: #55564f;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .caracteristicas-planificador li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #c5a15b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+        <a href="INDEX.html#inicio" class="logo">LUMEN<span>.</span></a>
+
+        <nav class="navegacion">
+            <a href="INDEX.html#inicio">Inicio</a>
+            <a href="INDEX.html#categorias">Categorías</a>
+            <a href="INDEX.html#productos">Productos</a>
+            <a href="INDEX.html#nosotros">Nosotros</a>
+        </nav>
+
+        <a href="INDEX.html#productos" class="boton-cabecera">
+            Explorar biblioteca
+        </a>
+    </header>
+
+    <!-- DETALLE DEL PRODUCTO -->
+    <main>
+        <section class="producto-detalle">
+
+            <div class="detalle-portada">
+                <span class="etiqueta">COLECCIÓN LUMEN · PLANTILLA DIGITAL</span>
+
+                <h2>Tu semana,<br>en equilibrio.</h2>
+
+                <p class="portada-lema">PLANIFICA · ORGANIZA · AVANZA</p>
+            </div>
+
+            <div class="detalle-info">
+                <span class="etiqueta">PLANIFICACIÓN DIGITAL · PDF</span>
+
+                <h1>Planificador semanal</h1>
+
+                <p class="descripcion">
+                    Recupera el control de tu semana con un planificador diseñado para ayudarte a organizar tus tareas,
+                    priorizar lo importante y avanzar hacia tus objetivos sin sentirte desbordado. Planifica tus días,
+                    distribuye tus responsabilidades y reserva tiempo para lo que realmente importa. Una herramienta
+                    práctica para transformar tus intenciones en acciones concretas.
+                </p>
+                <div class="caracteristicas-planificador">
+                    <h2>Organiza tu semana con claridad</h2>
+                    <ul>
+                        <li>Planificación semanal para visualizar tus compromisos.</li>
+                        <li>Espacio para organizar tareas y establecer prioridades.</li>
+                        <li>Seguimiento de objetivos y tareas pendientes.</li>
+                        <li>Diseño práctico para planificar tu semana a tu ritmo.</li>
+                    </ul>
+
+                </div>
+
+                <strong class="detalle-precio">4,99 €</strong>
+
+                <button class="boton-producto" type="button" disabled>
+                    Próximamente disponible
+                </button>
+
+                <p class="aviso">
+                    Producto en preparación. Próximamente podrás adquirir
+                    este planificador digital y descargarlo.
+                </p>
+
+                <a class="volver" href="INDEX.html#productos">
+                    ← Volver a la biblioteca
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <a href="INDEX.html#inicio" class="logo" style="color: #f8f6f0;">
+            LUMEN<span>.</span>
+        </a>
+
+        <p>Ideas que inspiran. Recursos que transforman.</p>
+
+        <p>© 2026 Lumen Digital. Proyecto en desarrollo.</p>
+    </footer>
+
+</body>
+
+</html>
